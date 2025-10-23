@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Kanit', sans-serif;
+      background-color: #dde0d2;
+      color: #d4d9c2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .resume {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(48, 67, 28, 0.1);
+      overflow: hidden;
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .left {
+      background: #828d69;
+      flex: 1 1 300px;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .photo-box {
+      width: 180px;
+      height: 180px;
+      background: #fff;
+      border-radius: 50%;
+      border: 4px solid #b8c198;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      color: #999;
+      margin-bottom: 20px;
+    }
+    .photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .name {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: #244f35;
+    }
+    .job {
+      font-size: 16px;
+      color: #d4d9c2;
+      margin-bottom: 25px;
+    }
+    .section-title {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #244f35;
+      margin: 20px 0 10px;
+      text-transform: uppercase;
+    }
+    .contact-info, .skills {
+      width: 100%;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin: 8px 0;
+      gap: 10px;
+      font-size: 15px;
+      justify-content: center;
+    }
+    .contact-item svg {
+      width: 20px;
+      height: 20px;
+      fill: #244f35;
+    }
+    .contact-item a {
+      color: #d4d9c2;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .contact-item a:hover {
+      color: #fff;
+    }
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .skills li {
+      margin: 5px 0;
+    }
+    .right {
+      flex: 2 1 500px;
+      padding: 30px 40px;
+    }
+    .right .section {
+      margin-bottom: 25px;
+    }
+    .right h2 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 22px;
+      color: #244f35;
+      margin-bottom: 10px;
+    }
+    .right p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+    }
+    .edu-item, .work-item {
+      margin-bottom: 15px;
+    }
+    .edu-item h3, .work-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+    }
+    .edu-item span, .work-item span {
+      font-size: 14px;
+      color: #777;
+    }
+    @media (max-width: 768px) {
+      .resume {
+        flex-direction: column;
+      }
+      .right {
+        padding: 20px;
+      }
+    }
+    .back-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  color: #244f35;
+  text-decoration: none;
+  font-weight: 1000;
+  transition: color 0.3s;
+}
+
+.back-arrow:hover {
+  color: #5b7554;
+}
+
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-arrow">
+  &#8592; 
+</a>
+
+  <div class="resume">
+    <div class="left">
+      <div class="photo-box">
+        <img src="images/besmala.jpg" alt="Your Photo">
+      </div>
+      <div class="name">BOUKENOUCHE Besmala</div>
+      <div class="job">Future AI and Data Science Engineer</div>
+
+      <div class="contact-info">
+        <div class="section-title">Contact</div>
+
+        <!--  Phone  -->
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.6 10.79a15.05 15.05 0 0 0 6.61 6.61l2.2-2.2a1 1 0 0 1 1.05-.24 11.36 11.36 0 0 0 3.56.57 1 1 0 0 1 1 1v3.49a1 1 0 0 1-1 1A16 16 0 0 1 4 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.56 1 1 0 0 1-.24 1.05l-2.23 2.18z"/></svg>
+          <span>+2137 95 86 90 88</span>
+        </div>
+
+        <!-- Email -->
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v1.57l10 6.08 10-6.08V6H2z"/></svg>
+          <span>besmala.boukenouche@ensia.edu.dz</span>
+        </div>
+
+        <!-- GitHub -->
+        <div class="contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.6.7 1.9 1.1.2.6.8 1.3 1.4 1.6v-2.1c-2.7-.6-5.5-1.3-5.5-5.9 0-1.3.5-2.5 1.3-3.3-.1-.3-.6-1.6.1-3.4 0 0 1-.3 3.4 1.3a11.6 11.6 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3.7 1.8.2 3.1.1 3.4.8.8 1.3 2 1.3 3.3 0 4.6-2.8 5.3-5.5 5.9v2.1c.6-.3 1.2-1 1.4-1.6.3-.4.9-1 1.9-1.1 0 0 .8-.1 1.7-1.1 0 0 1.1 0 .1.7 0 0-.7.3-1.2 1.5 0 0-.7 2.3-4 1.6v2c0 .4.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
+          <a href="https://github.com/Besmala-BOUKENOUCHE" target="_blank">github.com/Besmala-Boukenouche</a>
+        </div>
+      </div>
+
+      <div class="skills">
+        <div class="section-title">Skills</div>
+        <ul>
+          <li>HTML / CSS / JS</li>
+          <li>React & Flutter</li>
+          <li>UI/UX Design</li>
+          <li>Responsive Layouts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="section about">
+        <h2>About Me</h2>
+        <p>
+          I’m a web and app developer in progress, with hands-on experience creating a few successful projects during my studies. I’m constantly eager to learn and grow my skills further. I believe true learning begins with acknowledging how much there’s still to discover!
+        </p>
+      </div>
+
+      <div class="section education">
+        <h2>Education</h2>
+        <div class="edu-item">
+          <h3>Third Year Student</h3>
+          <span>The National Higher School of AI — 2025/2026</span>
+        </div>
+        <div class="edu-item">
+          <h3>Software Development Courses</h3>
+          <span>Web Development Course (2024)—</span>
+          <span>Mobile Development Course (2024)—</span>
+          <span>software engineering Course (2025)</span>
+        </div>
+      </div>
+
+      <div class="section experience">
+        <h2>Software development Experience</h2>
+        <div class="work-item">
+          <h3>Front-End & Back-End Developer — SoftWeb</h3>
+          <span>2024 - Present</span>
+          <p>Responsible for creating responsive and interactive web applications within a group of classmates using React,HTML,CSS and JavaScript (2 e-commerce webites).</p>
+        </div>
+        <div class="work-item">
+          <h3>Front-End & Back-End Developer — Mobile Dev</h3>
+          <span>2024 - Present</span>
+          <p>Designed and developed apps within a group of classmates with a focus on clean UI and accessibility (GYM workout planner app - 2024, 3afya plus app - 2025).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
