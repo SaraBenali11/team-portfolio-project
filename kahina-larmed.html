@@ -657,6 +657,62 @@
             border-radius: 50%;
         }
 
+        /* Navigation Arrows */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 20px rgba(108, 99, 255, 0.4);
+        }
+
+        .back-to-home {
+            position: fixed;
+            top: 100px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+            transition: var(--transition);
+        }
+
+        .back-to-home:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 7px 20px rgba(108, 99, 255, 0.4);
+        }
+
         /* Responsive Design */
         @media (max-width: 992px) {
             .about-content, .contact-content {
@@ -715,12 +771,33 @@
             .section-title h2 {
                 font-size: 2rem;
             }
+            
+            .back-to-top, .back-to-home {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+            
+            .back-to-home {
+                top: 90px;
+                left: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Particle Background -->
     <div class="particles" id="particles"></div>
+
+    <!-- Navigation Arrows -->
+    <div class="back-to-home" id="backToHome">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+    
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <!-- Header -->
     <header>
@@ -745,10 +822,6 @@
                 <h1>Hi, I'm <span>Kahina</span><br>AI Student & Developer</h1>
                 <p>Exploring the space where logic meets creativity — <br>from algorithms and data to ideas that make technology<br> more human.</p>
                 <a href="#projects" class="btn">View My Work</a>
-            </div>
-            <div class="profile-photo">
-                <!-- Replace with your actual photo -->
-                <img src="https://via.placeholder.com/350x350" alt="Kahina - AI Student">
             </div>
             <div class="hero-visual"></div>
             <div class="floating-elements">
@@ -1277,6 +1350,33 @@
             
             particlesContainer.appendChild(particle);
         }
+
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Back to home functionality
+        const backToHomeBtn = document.getElementById('backToHome');
+        
+        backToHomeBtn.addEventListener('click', function() {
+            // Replace with your actual home URL
+            const homeUrl = "index.html"; // Change this to your home URL
+            window.location.href = homeUrl;
+        });
     </script>
 </body>
 </html>
